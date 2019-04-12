@@ -1,0 +1,64 @@
+
+camunda:
+  baseUrl: http://localhost:8081
+  defaultEngine: /api/engine/engine/default
+  ## Url Extensions
+  task: /task
+  formVariables : /form-variables
+  submitForm : /submit-form
+  processDefinition : /process-definition
+  deployments : /deployments
+  ## Payload Arguments
+  claim-task-payload:
+    userId : userId
+    user : admin
+
+
+
+spring:
+  profiles.active: dev
+---
+spring:
+  profiles: dev
+  ansi:
+      enabled: DETECT
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+name: dev-component-mes-engine
+environment: development
+
+logging:
+  file: logs/dev_app.log
+  level:
+    de.psi.pai.mes.engine: debug
+    org.springframework.web: DEBUG
+    guru.springframework.controllers: DEBUG
+    org.hibernate: error
+  pattern:
+      file: "%d %-5level [%thread] %logger : %msg%n"
+
+
+---
+spring:
+  profiles: production
+  ansi:
+      enabled: DETECT
+name: prod-component-mes-engine
+environment: production
+logging:
+  file: logs/production_app.log
+  pattern:
+    file: "%d %-5level [%thread] %logger{0} : %msg%n"
+  level:
+    de.psi.pai.mes.engine: error
+    org.springframework.web: error
+    guru.springframework.controllers: warn
+    org.hibernate: error

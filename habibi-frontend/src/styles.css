@@ -1,0 +1,201 @@
+
+@import url(//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,greek-ext,latin-ext,cyrillic);
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('./assets/fonts/roboto/Roboto-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url('./assets/fonts/roboto/Roboto-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url('./assets/fonts/roboto/Roboto-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url('./assets/fonts/roboto/Roboto-Light.ttf'); 
+}
+
+
+body, body input, body textarea, body button, nav, header, h1, div, select, button {
+  
+  font-family: Roboto-Light;
+}
+
+
+
+/**
+ * ## Colors
+ */
+.sg-color-sample.psi-color-base:before, .psi-color-base.sg-color-sample-big:before {
+  background: #e6e6e6;
+}
+
+/**
+ * psi-color-base:
+ * Base Gray from which other grays are derived from. Also used as `psi-color-background`.
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-base"><span>230.230.230</span> <span>#e6e6e6</span></div>
+ */
+.sg-color-sample.psi-color-border:before, .psi-color-border.sg-color-sample-big:before {
+  background: #919191;
+}
+
+/**
+ * psi-color-border:
+ * Darker gray which is used for various borders.
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-border"><span>145.145.145</span> <span>#919191</span></div>
+ */
+.sg-color-sample.psi-color-light-border:before, .psi-color-light-border.sg-color-sample-big:before {
+  background: #b7b7b7;
+}
+
+/**
+ * psi-color-light-border:
+ * Lighter gray which is used for various borders.
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-light-border"><span>183.183.183</span> <span>#b7b7b7</span></div>
+ */
+.sg-color-sample.psi-color-control-inner-background:before, .psi-color-control-inner-background.sg-color-sample-big:before {
+  background: #f7f7f7;
+}
+
+/**
+ * psi-color-control-inner-background:
+ * Background for the inside of text boxes, password boxes, lists, trees, and tables.
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-control-inner-background"><span>247.247.247</span> <span>#f7f7f7</span></div>
+ */
+.sg-color-sample.psi-color-control-inner-background-alt:before, .psi-color-control-inner-background-alt.sg-color-sample-big:before {
+  background: white;
+  border: 1px solid #d9d9d9;
+}
+
+/**
+ * psi-color-control-inner-background-alt:
+ * Background for the inside of text boxes, password boxes, lists, trees, and tables. Used for alternate rows and when control is focused.
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-control-inner-background-alt"><span>255.255.255</span> <span>white</span></div>
+ */
+.sg-color-sample.psi-color-accent:before, .psi-color-accent.sg-color-sample-big:before {
+  background: #c8d246;
+}
+
+/**
+ * psi-color-accent:
+ * Accent Color 1
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-accent"><span>200.210.70</span> <span>#c8d246</span></div>
+ */
+.sg-color-sample.psi-color-accent2:before, .psi-color-accent2.sg-color-sample-big:before {
+  background: #fdf34b;
+}
+
+/**
+ * psi-color-accent2:
+ * Accent Color 2
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-accent2"><span>253.243.75</span> <span>#fdf34b</span></div>
+ */
+.sg-color-sample.psi-color-error:before, .psi-color-error.sg-color-sample-big:before {
+  background: #f00000;
+}
+
+/**
+ * psi-color-error:
+ * Color for warnings and errors
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-error"><span>240.0.0</span> <span>#f00000</span></div>
+ */
+.sg-color-sample.psi-color-shadow:before, .psi-color-shadow.sg-color-sample-big:before {
+  background: rgba(60, 60, 60, 0.3);
+}
+
+/**
+ * psi-color-shadow:
+ * Color for default shadow
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-shadow"><span>60.60.60</span> <span>rgba(60, 60, 60, 0.3)</span></div>
+ */
+.sg-color-sample.psi-color-focus:before, .psi-color-focus.sg-color-sample-big:before {
+  background: #b4d22d;
+}
+
+/**
+ * psi-color-focus:
+ * Color for focused elements
+ *
+ *     @example
+ *     <div class="sg-color-sample psi-color-focus"><span>180.210.45</span> <span>#b4d22d</span></div>
+ */
+.sg-color-text-sample.psi-color-dark-text {
+  color: black;
+  background: #e6e6e6;
+}
+
+/**
+ * psi-color-dark-text:
+ * Normal text color
+ *
+ *     @example
+ *     <div class="sg-color-text-sample psi-color-dark-text"><span>0.0.0</span> <span>black</span></div>
+ */
+.sg-color-text-sample.psi-color-disabled-text {
+  color: #878787;
+  background: #e6e6e6;
+}
+
+/**
+ * psi-color-disabled-text:
+ * Text color for disabled text
+ *
+ *     @example
+ *     <div class="sg-color-text-sample psi-color-disabled-text"><span>135.135.135</span> <span>#878787</span></div>
+ */
+.sg-color-text-sample.psi-color-light-text {
+  color: white;
+  background: #666666;
+}
+
+/**
+ * psi-color-light-text:
+ * Negative text color
+ *
+ *     @example
+ *     <div class="sg-color-text-sample psi-color-light-text"><span>255.255.255</span> <span>white</span></div>
+ */
+.sg-color-text-sample.psi-color-text-link {
+  color: #6ba300;
+  background: #e6e6e6;
+}
+
+/**
+* Workflow Cockpit home button stylings
+*
+* @example
+* <h1 routerLink="/home-view">{{title}}</h1>
+*/
+
+h1 {
+  cursor: pointer;
+
+}
+
+h1:focus {
+    outline: none;
+}

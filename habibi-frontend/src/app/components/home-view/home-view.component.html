@@ -1,0 +1,22 @@
+<div class="mat-app-background basic-container">
+
+  <div class="sg-example sg-padded">
+
+    <div class="sg-canvas">
+
+      <div _ngcontent-c2="" class="table-users" ng-app="app" ng-controller="appCtrl">
+        <div _ngcontent-c2="" class="header bxshd" l10ntranslate="" ng-reflect-l10n-translate="">Workflow Cockpit</div>
+        <div _ngcontent-c2="" style="height: 15px"></div>
+        <div class="home-navigation">
+          <div *ngIf="!logged_in; else logged_in_block">
+            <app-login (login)="change_login($event)"></app-login>
+          </div>
+          <ng-template #logged_in_block>
+            <p class="section-box bxshd" routerLink="/deployment-view" l10nTranslate>components.homeView.deployments</p>
+            <p class="section-box bxshd" routerLink="/workflow-view" l10nTranslate>components.homeView.workflows</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

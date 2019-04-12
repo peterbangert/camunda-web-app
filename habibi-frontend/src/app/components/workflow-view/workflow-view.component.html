@@ -1,0 +1,89 @@
+<div class="mat-app-background basic-container">
+  <div class="sg-example sg-padded">
+
+    <div class="sg-canvas">
+      <div ng-app="app" ng-controller="appCtrl" class="table-users">
+
+
+        <div ngResizable class="header bxshd" l10nTranslate>components.workflowView.workflows</div>
+        <div class="section-box bxshd ">
+          <div class="section-header" id="running-deployments" l10nTranslate>
+            components.workflowView.runningDeployments
+          </div>
+
+          <div *ngIf="runningWorkflow">
+            <div class="top-border">
+
+              <button _ngcontent-c1="" class="sg-small-button fade-op-button bold" (click)="unstageWorkflow()">X
+              </button>
+              <app-workflow-runner-modal [workflow]="workflow" [startBlock]="startBlock"
+                                         (sendMessage)="sendMessage($event)"></app-workflow-runner-modal>
+
+            </div>
+          </div>
+        </div>
+        <div class="section-box bxshd">
+          <div class="section-header" l10nTranslate>components.workflowView.openTasks</div>
+
+
+          <table id="workflow-listings" class="bxshd">
+            <tr id="{{ element.id }}" class="table-body" *ngFor="let element of openTasks">
+              <td>{{ element.id }}</td>
+
+              <td class="collapsible-op">
+
+                <div class="sg-button-box ">
+                  <button id="{{ element.id }}_more_less" (click)="showMore(element.id)"
+                          class="sg-small-button fade-button more-button" l10nTranslate>components.workflowView.more
+                  </button>
+                </div>
+              </td>
+              <td class="collapsible" *ngFor="let item of element | keyvalue ">{{item.key}} : {{item.value}} </td>
+              <td class="collapsible">
+                <div class="sg-button-box ">
+                  <button class="sg-small-button fade-button" (click)="stageWorkflow(element, false)"
+                          l10nTranslate>components.workflowView.continue
+                  </button>
+                </div>
+              </td>
+
+            </tr>
+          </table>
+        </div>
+
+        <div class="section-box bxshd">
+          <div class="section-header" l10nTranslate>components.workflowView.allDeployments</div>
+
+
+          <table id="workflow-listings" class="bxshd">
+            <tr id="{{ element.id }}" class="table-body" *ngFor="let element of deployments">
+              <td>{{ element.id }}</td>
+              <td class="collapsible-op">
+
+
+                <div class="sg-button-box ">
+                  <button id="{{ element.id }}_more_less" (click)="showMore(element.id)"
+                          class="sg-small-button fade-button more-button" l10nTranslate>components.workflowView.more
+                  </button>
+                </div>
+
+              </td>
+              <td class="collapsible" *ngFor="let item of element | keyvalue ">{{item.key}} : {{item.value}} </td>
+              <td class="collapsible">{{ element.resources | prettyprint }}</td>
+              <td class="collapsible">
+                <div class="sg-button-box ">
+                  <button class="sg-small-button fade-button" (click)="stageWorkflow(element, true)"
+                          l10nTranslate>components.workflowView.run
+                  </button>
+                </div>
+              </td>
+
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

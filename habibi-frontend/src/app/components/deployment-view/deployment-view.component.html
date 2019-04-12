@@ -1,0 +1,57 @@
+<div class="mat-app-background basic-container">
+  <div class="sg-example sg-padded">
+
+    <div class="sg-canvas">
+      <div ng-app="app" ng-controller="appCtrl" class="table-users">
+        <div class="header bxshd" l10nTranslate>components.deploymentView.deployments</div>
+
+        <div style="height: 15px"></div>
+        <table class="bxshd">
+          <tr id="head-row">
+
+            <th l10nTranslate>components.deploymentView.id</th>
+            <th l10nTranslate>components.deploymentView.name</th>
+            <th l10nTranslate>components.deploymentView.date</th>
+            <th l10nTranslate>components.deploymentView.resources</th>
+            <th l10nTranslate>components.deploymentView.options</th>
+          </tr>
+          <tr id="{{element.id}}" class="table-body" *ngFor="let element of deployments">
+
+            <td>{{ element.id }}</td>
+            <td>{{ element.name }}</td>
+            <td>{{ element.deploymentTime }}</td>
+            <td class="collapsible-op">
+
+              <div class="sg-button-box ">
+                <button id="{{ element.id }}_more_less" (click)="showMore(element.id)"
+                        class="sg-small-button fade-button more-button"
+                        l10nTranslate #div>components.deploymentView.more
+                </button>
+              </div>
+            </td>
+            <td class="collapsible">{{ element.resources | prettyprint}}</td>
+
+            <td class="collapsible">
+              <div class="sg-button-box ">
+                <button class="sg-small-button fade-button" (click)="removeDeployment(element.id)"
+                        l10nTranslate>components.deploymentView.remove
+                </button>
+                <button class="sg-small-button fade-button" (click)="download(element.id)"
+                        l10nTranslate>components.deploymentView.download
+                </button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="centerable fade-op upload-btn-wrapper">
+        <button class="sg-standard-button"
+                l10nTranslate>components.deploymentView.upload <input type="file"
+                                                                      name="file"
+                                                                      accept=".json"
+                                                                      (change)="handleFileInput($event.target.files)">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

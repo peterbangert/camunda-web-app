@@ -1,0 +1,68 @@
+ {
+
+   "title": "Workflow Cockpit",
+
+   "app" : {
+
+     "lang":"DE",
+     "workflows": "Workflows",
+     "deployments": "Eingesetzte Definitionen"
+   },
+
+   "components" :  {
+
+     "workflowView" : {
+
+       "workflows": "Workflows",
+       "allDeployments": "Alle Deployments",
+       "runningDeployments": "Laufende Deployments",
+       "openTasks": "Offene Tätigkeiten",
+       "more":"Mehr",
+       "less":"Weniger",
+       "continue": "Fortfahren",
+       "run": "Laufen"
+     },
+
+     "workflowRunnerModal": {
+
+       "information":"Informationen",
+       "parameters":"Parameteren",
+       "status":"Stand",
+       "notStarted":"Nicht Gestartet",
+       "run": "Laufen"
+     },
+
+     "homeView" : {
+
+       "workflows": "Workflows",
+       "deployments": "Eingesetzte Definitionen"
+     },
+
+     "deploymentView" : {
+
+       "deployments": "Eingesetzte Definitionen",
+       "type":"TYP",
+       "id":"ID",
+       "description":"BESCHREIBUNG",
+       "date":"DATUM",
+       "version":"VERSIONEN",
+       "options":"OPTIONEN",
+       "resources": "RESOURCEN",
+       "name": "NAME",
+       "more":"Mehr",
+       "less":"Weniger",
+       "remove":"loschen",
+       "hide":"weg",
+       "download":"herunterladen",
+       "redeploy":"redeploy",
+       "upload": "Hochladen",
+       "notImplemented" : "Apologies, however the %s funcitonality has not yet been implemented.",
+       "removingDeployment" : "removing deployment",
+       "runningInstances":"Laufende Instanzen"
+     },
+     "login" : {
+       "login" : "Einloggen"
+     }
+
+   }
+}

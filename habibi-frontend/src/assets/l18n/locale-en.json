@@ -1,0 +1,67 @@
+ {
+
+   "title": "Workflow Cockpit",
+
+   "app" : {
+
+     "lang":"EN",
+     "workflows": "Workflows",
+     "deployments": "Deployed Definitions"
+   },
+
+   "components" :  {
+
+     "workflowView" : {
+
+       "workflows": "Workflows",
+       "allDeployments": "All Deployments",
+       "runningDeployments": "Running Deployments",
+       "openTasks": "Open Tasks",
+       "more":"More",
+       "less":"Less",
+       "continue": "Continue",
+       "run": "Run"
+     },
+
+     "workflowRunnerModal": {
+
+       "information":"Information",
+       "parameters":"Parameters",
+       "status":"Status",
+       "notStarted":"Not Started",
+       "run": "Run"
+     },
+
+     "homeView" : {
+
+       "workflows": "Workflows",
+       "deployments": "Deployed Definitions"
+     },
+
+     "deploymentView" : {
+
+       "deployments": "Deployed Definitions",
+       "type":"TYPE",
+       "id":"ID",
+       "description":"DESCRIPTION",
+       "date":"DATE",
+       "version":"VERSION",
+       "options":"OPTIONS",
+       "resources": "RESOURCES",
+       "name": "NAME",
+       "more":"More",
+       "less":"Less",
+       "remove":"remove",
+       "hide":"hide",
+       "download":"download",
+       "redeploy":"redeploy",
+       "upload": "Upload",
+       "notImplemented" : "Apologies, however the %s funcitonality has not yet been implemented.",
+       "removingDeployment" : "removing deployment",
+       "runningInstances":"Running Instances"
+     },
+     "login" : {
+       "login" : "Login"
+     }
+   }
+ }

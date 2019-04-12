@@ -1,0 +1,489 @@
+
+.sg-navbar-basic {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: #b4d22d;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@mixin bxshd() {
+  /*box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);*/
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+}
+
+.bxshd {
+  /*box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);*/
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+}
+
+.header {
+
+  border-left: 10px solid #b4d22d;
+
+  color: grey;
+  font-size: 1.5em;
+  padding: 1rem;
+  text-align: left;
+
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.home-navigation p {
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.home-navigation p :focus {
+  outline: none;
+}
+
+.table-users {
+  border-spacing: 0;
+  max-width: calc(100% - 2em);
+  margin: 1em auto;
+  /*overflow: hidden;*/
+  /*width: 800px;*/
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  padding: 10px;
+
+}
+
+table td {
+
+  text-align: center;
+  vertical-align: middle;
+  color: grey;
+}
+
+table th {
+
+  background-color: white;
+  font-family: Roboto-Light;
+  font-size: .8em;
+  color: lightgrey;
+
+
+}
+
+table tr {
+  border: solid;
+  border-width: .5px 0;
+  border-color: lightgrey;
+
+}
+
+.collapsible-op {
+  display: none;
+}
+
+
+table {
+  box-shadow: none !important;
+}
+
+table tr {
+  @include bxshd();
+}
+
+.inlineinput {
+  display: grid;
+  width: 100%;
+}
+
+/*
+  #running-deployments-table > table, tr, td {
+    : ;
+  }
+
+  #workflow-listings > table, tr, td {
+
+
+    display: inline-grid ;
+    text-align: left !important;
+    padding: 5px !important;
+
+
+  }*/
+.workflow-row {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.run-column {
+  /*display: grid;*/
+
+  color: grey;
+}
+
+.run-column .middle {
+
+}
+
+table, tr, td {
+  display: inline-grid;
+  text-align: left !important;
+  padding: 5px !important;
+
+}
+
+tr td:last-child {
+  text-align: right;
+}
+
+tr:first-child {
+  //display: none;
+}
+
+
+.section-box {
+
+  margin: 10px;
+  padding: 10px;
+
+}
+
+.section-header {
+
+  color: grey;
+  font-size: 1em;
+  padding: 1rem;
+  text-align: left;
+
+
+}
+
+tr {
+  margin: 5px;
+  padding: 0;
+}
+
+.collapsible {
+  display: none;
+}
+
+.collapsible-op {
+  display: grid !important;
+}
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 0px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.right {
+  float: right;
+}
+
+.pad-5 {
+  padding: 5px;
+}
+
+.master-container {
+  max-width: 1100px;
+  margin: auto;
+
+}
+
+.top-border {
+  border-top: 1px solid grey;
+
+}
+
+.bottom-border {
+  border-bottom: 1px solid grey;
+
+}
+
+.bad-status {
+  color: red;
+  margin-left: 5px;
+  border-left: 3px solid red;
+  padding-left: 6px;
+}
+
+.good-status {
+  color: #b4d22d;
+  margin-left: 5px;
+  border-left: 3px solid #b4d22d;
+  padding-left: 6px;
+}
+
+
+.centerable {
+  margin: 0 auto;
+  display: table;
+}
+
+.main-menu-button {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+
+.fade {
+  opacity: 0.5;
+}
+
+.fade:hover {
+  opacity: 1;
+}
+
+.fade-op {
+  opacity: 1;
+}
+
+.fade-op:hover {
+  opacity: 0.5;
+}
+
+.fade-table {
+  background: white
+}
+
+.fade-table:hover {
+  box-shadow: 1px 1px #b4d22d,
+  2px 2px #b4d22d,
+  3px 3px #b4d22d;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+.fade-button {
+  background-color: white;
+  color: grey;
+}
+
+.fade-button:hover {
+  background-color: #b4d22d;
+  color: white;
+}
+
+.fade-op-button {
+  background-color: #b4d22d;
+  color: white;
+}
+
+.fade-op-button:hover {
+  background-color: white;
+  color: grey;
+}
+
+
+.sg-standard-button {
+  background-color: #b4d22d; /* Green */
+  border: black;
+  transition: all .2s;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  float: middle;
+}
+
+.sg-small-button {
+  transition: all .2s;
+  border: none;
+
+
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 8px;
+  float: middle;
+}
+
+.sg-medium-button {
+  transition: all .2s;
+  border: none;
+
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  float: middle;
+}
+
+.sg-button-box {
+  display: grid;
+  border: none;
+  border-width: .5px 0;
+  border-color: lightgrey;
+}
+
+.sg-navbar-basic {
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+.centerable {
+  margin: 0 auto;
+  display: table;
+}
+
+.main-menu-button {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  /*display: inline-block;*/
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

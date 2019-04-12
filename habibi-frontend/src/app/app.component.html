@@ -1,0 +1,38 @@
+<div class="master-container">
+  <div class="sg-container">
+    <img src="../assets/images/psi-logo.jpg" class="sg-logo" style="float: right;">
+  </div>
+
+  <h1 routerLink="/home-view">{{title}}</h1>
+
+
+  <nav class="sg-navbar-basic">
+
+    <div class="dropdown left">
+      <button class="dropbtn fade" id="main-menu-button">
+        <div class="main-menu-button"></div>
+        <div class="main-menu-button"></div>
+        <div class="main-menu-button"></div>
+      </button>
+      <div class="dropdown-content">
+        <a class="" routerLink="/deployment-view" l10nTranslate>app.deployments</a>
+        <a class="" routerLink="/workflow-view" l10nTranslate>app.workflows</a>
+
+
+      </div>
+    </div>
+
+    <div class="dropdown right">
+      <button class="dropbtn fade" id="language-selector" l10nTranslate>app.lang</button>
+      <div class="dropdown-content">
+        <a (click)="selectLanguage('de');">DE</a>
+        <a (click)="selectLanguage('en');">EN</a>
+
+
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+
+
+</div>

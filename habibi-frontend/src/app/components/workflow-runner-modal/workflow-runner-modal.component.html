@@ -1,0 +1,37 @@
+<div class="workflow-row" _ngcontent-c1="">
+  <div class="run-column" _ngcontent-c1="">
+    <div class="pad-5 bold" _ngcontent-c1="" l10nTranslate>components.workflowRunnerModal.information</div>
+    <table _ngcontent-c1="">
+      <tbody _ngcontent-c1="">
+      <tr id="{{workflow.id}}" class="table-body" _ngcontent-c1="">
+
+        <td class="collapsible" *ngFor="let item of workflow | keyvalue  ">{{item.key}} : {{item.value}} </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="workflow.fields" class="run-column pad-5" _ngcontent-c1="">
+    <div class="pad-5 bottom-border bold" _ngcontent-c1="" l10nTranslate>components.workflowRunnerModal.parameters</div>
+    <div class="pad-5" _ngcontent-c1="" *ngFor="let param of workflow.fields">
+      <div> {{param.key}}:</div>
+      <input id="{{param.key}}" value="{{param.value}}">
+    </div>
+  </div>
+  <div class="run-column pad-5" _ngcontent-c1="">
+    <div class="pad-5 bottom-border bold" _ngcontent-c1="" l10nTranslate>components.workflowRunnerModal.status</div>
+    <div style="padding-top: 10px" _ngcontent-c1="">
+      <div _ngcontent-c1="" class="good-status" *ngIf="statusExist; else not_started_block">{{workflow.status}}</div>
+      <ng-template #not_started_block>
+        <div _ngcontent-c1="" class="bad-status" l10nTranslate>components.workflowRunnerModal.notStarted</div>
+      </ng-template>
+    </div>
+    <div _ngcontent-c1="" style="height: 25%;"></div>
+    <div class="pad-5" _ngcontent-c1="">
+      <div *ngIf="notFinished">
+        <button class="sg-medium-button fade-button" _ngcontent-c1="" (click)="emitMessage()"
+                l10nTranslate>components.workflowRunnerModal.run
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

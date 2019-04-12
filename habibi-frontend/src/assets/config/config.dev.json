@@ -1,0 +1,19 @@
+{
+  "urls": {
+    "camunda": "http://localhost:8080",
+    "backend": "http://localhost:4200/api",
+    "websocket": "http://localhost:4200/api/websocket",
+    "extensions": {
+      "chat": "/chat",
+      "sendMessage": "/app/send/message",
+      "workflow": "/workflow",
+      "deployment": "/deployments",
+      "openTasks": "/open-tasks",
+      "engineDefault": "/api/engine/engine/default"
+    }
+  },
+  "camundaHttpHeaders" : {
+    "contentType": "application/json",
+    "authorization": "my-auth-token"
+  }
+}
